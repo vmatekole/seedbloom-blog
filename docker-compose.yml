@@ -1,0 +1,21 @@
+ghost:
+  image: "ghost:latest"
+  extra_hosts:
+    - "ghost.local:172.18.0.2"
+  container_name: "ghost"
+  ports:
+    - "8084:2368"
+  volumes:
+    - "/apps/seedbloom-blog/blog:/var/lib/ghost"
+    - "/apps/seedbloom-blog/docker-entrypoint.sh:/entrypoint.sh"
+  links:
+    - db
+db:
+  image: mariadb:latest
+  ports:
+    - "3306:3306"
+  volumes:
+    - "/var/mariadb/data:/var/lib/mysql"
+  env_file:
+      - ".mariadb.env"
+

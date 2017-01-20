@@ -1,0 +1,242 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "global_vars";
+@import "../bower_components/font-awesome/css/font-awesome.css";
+$default-delay: 0.333s;
+@import "_reset";
+
+@import "_animated";
+@import "_mixins";
+@import "typography";
+
+
+
+// Fonts----
+$Roboto: 'Roboto', sans-serif;
+
+// Transition
+
+// Space
+$default-padding: 12px;
+$text-width: 740px;
+
+
+
+@charset "UTF-8";
+
+//Layout
+.content {
+  padding: $default-padding $default-padding 0px $default-padding;
+  margin: 0 auto 0 auto;
+  max-width: $text-width;
+  //@media (min-width: $screen-sm) {
+  //  margin: 0px 100px 0px 100px;
+  //}
+}
+// Navigation
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+.fa-times:before {
+  content: "\f00d";
+}
+
+#header {
+  height: 55px;
+  * {
+    border: 0 !important;
+    border-color: transparent !important;
+  }
+  .navbar {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    border-radius: 0;
+  }
+  .navbar-default {
+    background-color: $lochmara;
+    @include transition(all ease-in-out 0.3s);
+  }
+
+  .navbar-right {
+    margin-right: 10px;
+  }
+
+  .navbar-collapse {
+    @extend .fadeOutUp;
+    @include transition(all ease-in-out 0.3s);
+  }
+
+  @media (min-width: $screen-sm) {
+    .navbar-toggle {
+      display: none !important;
+    }
+    .navbar-collapse {
+      padding-top: 0 !important;
+    }
+  }
+
+  &.toggle {
+    .navbar-collapse {
+      @extend .fadeInDown;
+      @include transition(all ease-in-out 0.3s);
+    }
+  }
+  .navbar-collapse {
+    position: fixed;
+    max-width: 50%;
+    right: 10px;
+    background-color: $lochmara;
+    padding-top: 10px;
+    ul {
+      li a {
+        color: #ffffff !important;
+      }
+      li.active a, li.active a:focus, li.active a:active, a:hover {
+        background-color: $lochmara !important;
+        color: $corn-field !important;
+      }
+    }
+  }
+  .navbar-toggle {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 15px 15px 0 0 !important;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    cursor: pointer;
+    display: block;
+    z-index: 999999;
+    position: relative;
+    i {
+      color: #ffffff;
+      @extend .fa-bars;
+    }
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+  &.toggle {
+    .navbar-toggle {
+      i {
+        @extend .fa-times;
+      }
+    }
+  }
+  &.sticky, &.toggle {
+    .navbar-default {
+      background-color: $lochmara !important;
+      height: 55px;
+      @include transition(all ease-in-out 0.3s);
+    }
+    i {
+      color: #ffffff;
+    }
+    opacity: 1;
+    z-index: 99999;
+    visibility: visible;
+    display: block;
+    @media(max-width: $screen-xs-max) {
+      background: $black-pearl;;
+      background-size: cover;
+      transition: inherit !important;
+      .logo {
+        display: block;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+#spacer {
+  height: 1px;
+  min-height: 1px;
+  width: 100%;
+}
+
+// Post
+$default-margin: 20px 10px 10px 10px;
+
+
+
+.post-head {
+  position: relative;
+  height: 470px;
+  overflow: hidden;
+  .overlay {
+    -webkit-filter: sepia(1);
+    filter: sepia(1);
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .description {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    .container {
+      color: #ffffff;
+      a, h1 {
+        color: #ffffff;
+      }
+      .post-meta {
+        a {
+          display: inline-block;
+          margin: 20px 10px 0px 10px;
+          padding: 5px 10px 5px 10px;
+          background-color: $limeade;
+        }
+        h1 {
+          margin: 20px 10px 0px 10px;
+        }
+      }
+    }
+  }
+}
+
+
+.author-image {
+  display: inline-block;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 20px 10px 30px 10px;
+  img {
+    max-width: 75px;
+    max-height: 75px;
+  }
+}
+
+.name-date {
+  display: inline-block;
+  margin: $default-margin;
+  width: 50%;
+  vertical-align: top;
+}
+
+
+.post {
+   h1 {
+     display: block;
+     margin: $default-margin;
+   }
+
+  .post-header {
+    .share {
+      margin: $default-margin;
+    }
+  }
+
+  .post-content {
+    margin: $default-margin;
+  }
+}
+

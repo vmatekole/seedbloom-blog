@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2100px" height="60px" viewBox="0 0 2100 60" style="enable-background:new 0 0 2100 60;" xml:space="preserve">
+<g>
+	<g>
+		<g id="XMLID_3_">
+			<g>
+				<polyline style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" points="992.894,5.458 1031.021,30.234 1015.772,40.144 				
+					"/>
+				<polyline style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" points="1081.877,38.496 1069.163,30.234 1107.293,5.458 
+					1145.433,30.234 1107.293,55.012 1024.09,41.494 1015.772,40.144 954.765,30.234 				"/>
+				<polyline style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" points="1107.293,5.458 1038.653,35.193 1024.09,41.494 
+					992.894,55.012 954.765,30.234 				"/>
+			</g>
+		</g>
+		<line style="fill:none;stroke:#E6E6E5;" x1="954.765" y1="30.234" x2="1050.1" y2="17.846"/>
+		<line style="fill:none;stroke:#E6E6E5;" x1="1050.1" y1="42.621" x2="1069.163" y2="30.234"/>
+		<polyline style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" points="954.765,30.234 992.894,5.458 1050.1,17.846 
+			1031.021,30.234 1038.653,35.193 1050.1,42.621 1081.877,38.496 1145.433,30.234 1069.163,30.234 		"/>
+		<line style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" x1="1107.293" y1="55.012" x2="1081.877" y2="38.496"/>
+		<line style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" x1="1015.772" y1="40.144" x2="992.894" y2="55.012"/>
+	</g>
+	<line style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" x1="0" y1="30.239" x2="955.09" y2="30.239"/>
+	<line style="fill:none;stroke:#E6E6E5;stroke-miterlimit:10;" x1="2100" y1="30.239" x2="1145.433" y2="30.239"/>
+</g>
+</svg>
