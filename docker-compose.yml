@@ -9,8 +9,9 @@ ghost:
     - "/apps/seedbloom-blog/blog:/var/lib/ghost"
     - "/apps/seedbloom-blog/docker-entrypoint.sh:/entrypoint.sh"
   links:
-    - db
+    - db:mysql
 db:
+  container_name: mysql
   image: mariadb:latest
   ports:
     - "3306:3306"
