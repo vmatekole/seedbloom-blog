@@ -1,3 +1,3 @@
 FROM ghost:0.11.4
-COPY blog /var/lib/ghost
+COPY blog/themes/seedbloom /var/lib/ghost/themes/
 COPY docker-entrypoint.sh /entrypoint.sh
