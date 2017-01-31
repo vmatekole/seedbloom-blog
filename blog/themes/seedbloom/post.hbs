@@ -6,7 +6,8 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-  <header class="main-header post-head {{#if image}}" style="background: url({{image}}) {{else}}no-cover{{/if}}">
+  <header class="main-header post-head {{#if image}}" style="background-image: url({{image}});background-position: center center;background-repeat: no-repeat;background-size: cover; {{else}}no-cover{{/if}}">
+    <div class="overlay"></div>
     <section class="description">
       <div class="container">
         <div class="row">

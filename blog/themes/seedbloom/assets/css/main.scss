@@ -15,6 +15,8 @@ $Roboto: 'Roboto', sans-serif;
 // Spacing
 $default-padding: 12px;
 $text-width: 740px;
+$padding: 48px;
+
 
 #spacer {
   height: 1px;
@@ -58,6 +60,16 @@ $text-width: 740px;
   }
 }
 
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  width: 100%;
+  -webkit-filter: sepia(1);
+  filter: sepia(1);
+}
 
 #header {
   height: 55px;
@@ -176,15 +188,6 @@ $default-margin: 20px 10px 10px 10px;
   position: relative;
   height: 470px;
   overflow: hidden;
-  .overlay {
-    -webkit-filter: sepia(1);
-    filter: sepia(1);
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
   .description {
     left: 0;
     position: absolute;
@@ -192,6 +195,7 @@ $default-margin: 20px 10px 10px 10px;
     transform: translateY(-50%);
     width: 100%;
     .container {
+      padding: 0 $padding 0 $padding;
       color: #ffffff;
       a, h1 {
         color: #ffffff;
@@ -251,15 +255,15 @@ $default-margin: 20px 10px 10px 10px;
   min-height: 650px;
   min-width: 320px;
   @media (min-width: $screen-xs) {
-    min-height: 750px;
+    min-height: 400px;
     min-width: $screen-xs;
   }
   @media (min-width: $screen-sm) {
-    min-height: 900px;
+    min-height: 400px;
     min-width: $screen-sm;
   }
   @media (min-width: $screen-md) {
-    min-height: 1070px;
+    min-height: 400px;
     min-width: $screen-md;
   }
   p {
@@ -281,9 +285,9 @@ $default-margin: 20px 10px 10px 10px;
       .row {
         height: 100%;
         .banner-in {
-          margin-top: 33%;
+          margin-top: 0;
           @media (min-width: $screen-sm) {
-            margin-top: 30%;
+            margin-top: 0;
           }
           .banner-cont {
             p {
@@ -291,7 +295,7 @@ $default-margin: 20px 10px 10px 10px;
               color: $lochmara;
               line-height: 1.5;
             }
-            margin-top: 10%;
+            margin-top: 1%;
             @media(max-width: $screen-xs-max) {
               padding: 20px 0;
             }
@@ -351,10 +355,10 @@ $default-margin: 20px 10px 10px 10px;
 }
 
 #content {
-  $padding: 48px;
   max-width: 1100px;
   padding-top: $padding;
   .post-image {
+    position: relative;
     padding-left: $padding !important; padding-right: $padding!important;
   }
   article {
@@ -370,6 +374,7 @@ $default-margin: 20px 10px 10px 10px;
       padding: 27px 48px 0px 48px;
     }
     .img {
+      position: relative;
       min-height: 300px;
       .post-title {
         a {
@@ -409,4 +414,39 @@ $default-margin: 20px 10px 10px 10px;
     }
   }
   padding-bottom: 200px;
+}
+
+// Author page
+.author-head {
+  .overlay {
+    background: rgba(0,0,0,0.5);
+  }
+  position: relative;
+  min-height: 200px;
+  color: #ffffff;
+  a, .author-title {
+    color: #ffffff;
+  }
+  .icon-location {
+    font-weight: 500;
+  }
+  .author-bio {
+    padding-bottom: $padding/2;
+  }
+}
+.author-profile {
+  margin: $padding auto 0 auto;
+  padding: 0 $padding $padding $padding;
+  .author-image  {
+    .img {
+      min-width: 100px; min-height: 100px;
+    }
+  }
+}
+
+.tags.content {
+  padding: 0 $padding 0 $padding;
+  .row {
+    padding: 0 $padding $padding $padding;
+  }
 }

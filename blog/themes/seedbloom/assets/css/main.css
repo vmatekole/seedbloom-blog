@@ -8404,6 +8404,16 @@ a:hover {
 .post-meta h1 {
   margin: 20px 10px 0px 10px; }
 
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  -webkit-filter: sepia(1);
+  filter: sepia(1); }
+
 #header {
   height: 55px; }
   #header * {
@@ -8497,14 +8507,6 @@ a:hover {
   position: relative;
   height: 470px;
   overflow: hidden; }
-  .post-head .overlay {
-    -webkit-filter: sepia(1);
-    filter: sepia(1);
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%; }
   .post-head .description {
     left: 0;
     position: absolute;
@@ -8512,6 +8514,7 @@ a:hover {
     transform: translateY(-50%);
     width: 100%; }
     .post-head .description .container {
+      padding: 0 48px 0 48px;
       color: #ffffff; }
       .post-head .description .container a, .post-head .description .container h1 {
         color: #ffffff; }
@@ -8558,15 +8561,15 @@ a:hover {
   min-width: 320px; }
   @media (min-width: 480px) {
     .banner-section {
-      min-height: 750px;
+      min-height: 400px;
       min-width: 480px; } }
   @media (min-width: 768px) {
     .banner-section {
-      min-height: 900px;
+      min-height: 400px;
       min-width: 768px; } }
   @media (min-width: 992px) {
     .banner-section {
-      min-height: 1070px;
+      min-height: 400px;
       min-width: 992px; } }
   .banner-section p {
     text-align: center;
@@ -8587,12 +8590,12 @@ a:hover {
       .banner-section .banner .container .row {
         height: 100%; }
         .banner-section .banner .container .row .banner-in {
-          margin-top: 33%; }
+          margin-top: 0; }
           @media (min-width: 768px) {
             .banner-section .banner .container .row .banner-in {
-              margin-top: 30%; } }
+              margin-top: 0; } }
           .banner-section .banner .container .row .banner-in .banner-cont {
-            margin-top: 10%; }
+            margin-top: 1%; }
             .banner-section .banner .container .row .banner-in .banner-cont p {
               text-align: center !important;
               color: #082336;
@@ -8646,6 +8649,7 @@ a:hover {
   padding-top: 48px;
   padding-bottom: 200px; }
   #content .post-image {
+    position: relative;
     padding-left: 48px !important;
     padding-right: 48px !important; }
   #content article {
@@ -8660,6 +8664,7 @@ a:hover {
       float: right;
       padding: 27px 48px 0px 48px; }
     #content article .img {
+      position: relative;
       min-height: 300px; }
       #content article .img .post-title a {
         padding: 0 48px 0 48px !important; }
@@ -8682,5 +8687,30 @@ a:hover {
       max-width: 100%; }
     #content img {
       max-height: 400px; } }
+
+.author-head {
+  position: relative;
+  min-height: 200px;
+  color: #ffffff; }
+  .author-head .overlay {
+    background: rgba(0, 0, 0, 0.5); }
+  .author-head a, .author-head .author-title {
+    color: #ffffff; }
+  .author-head .icon-location {
+    font-weight: 500; }
+  .author-head .author-bio {
+    padding-bottom: 24px; }
+
+.author-profile {
+  margin: 48px auto 0 auto;
+  padding: 0 48px 48px 48px; }
+  .author-profile .author-image .img {
+    min-width: 100px;
+    min-height: 100px; }
+
+.tags.content {
+  padding: 0 48px 0 48px; }
+  .tags.content .row {
+    padding: 0 48px 48px 48px; }
 
 /*# sourceMappingURL=main.css.map */
