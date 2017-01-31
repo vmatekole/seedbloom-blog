@@ -7,42 +7,36 @@
 {{#post}}
 
   <header class="main-header post-head {{#if image}}" style="background: url({{image}}) {{else}}no-cover{{/if}}">
-    <div class="overlay"></div>
     <section class="description">
       <div class="container">
-        <section class="post-meta">
-          {{tags separator=''}}
-          <h1 class="post-title">{{title}}</h1>
-        </section>
-        {{#author}}
-          {{#if image}}
-            <section class="author">
-              <figure class="author-image">
-                <a href="{{url}}"><img class="img-responsive" src="{{image}}"/></a>
-              </figure>
-              <section class="name-date">
-                <span class="name">{{name}}</span><br/>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-              </section>
+        <div class="row">
+          <div class="col-md-8">
+            <section class="post-meta">
+              {{tags separator=''}}
+              <h1 class="post-title">{{title}}</h1>
             </section>
-          {{/if}}
-        {{/author}}
-        <section class="share">
-          <h4>Share this post</h4>
-          <a class="icon-twitter"
-             href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-            <span class="hidden">Twitter</span>
-          </a>
-          <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-            <span class="hidden">Facebook</span>
-          </a>
-          <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-             onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-            <span class="hidden">Google+</span>
-          </a>
-        </section>
+            {{#author}}
+              {{#if image}}
+                <section class="author">
+                  <figure class="author-image">
+                    <a href="{{url}}"><img class="img-responsive" src="{{image}}"/></a>
+                  </figure>
+                  <section class="name-date">
+                    <span class="name">{{name}}</span><br/>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date
+                        format="DD MMMM YYYY"}}</time>
+                  </section>
+                </section>
+              {{/if}}
+            {{/author}}
+            <hr />
+            <div class="share-buttons">
+              <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?url={{url}}&text={{text}}"></a>
+              <a class="fa fa-envelope-o" href="https://twitter.com/intent/tweet?url={{url}}&text={{text}}"></a>
+              <a class="fa fa-copy" href="https://twitter.com/intent/tweet?url={{url}}&text={{text}}"></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </header>
@@ -53,12 +47,9 @@
       <section class="post-content">
         {{content}}
       </section>
-
       <footer class="post-footer hide">
-
         {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
-
           {{#if image}}
             <figure class="author-image">
               <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
@@ -78,12 +69,8 @@
               {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
             </div>
           </section>
-
         {{/author}}
-
-
       </footer>
-
     </article>
   </main>
 

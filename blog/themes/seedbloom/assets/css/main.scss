@@ -1,39 +1,39 @@
+@charset "UTF-8";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "global_vars";
 @import "../bower_components/font-awesome/css/font-awesome.css";
 $default-delay: 0.333s;
 @import "_reset";
-
 @import "_animated";
 @import "_mixins";
 @import "typography";
 
 
-
-// Fonts----
+// Fonts
 $Roboto: 'Roboto', sans-serif;
 
-// Transition
-
-// Space
+// Spacing
 $default-padding: 12px;
 $text-width: 740px;
 
-
-
-@charset "UTF-8";
+#spacer {
+  height: 1px;
+  min-height: 1px;
+  width: 100%;
+}
 
 //Layout
 .content {
   padding: $default-padding $default-padding 0px $default-padding;
   margin: 0 auto 0 auto;
   max-width: $text-width;
-  //@media (min-width: $screen-sm) {
-  //  margin: 0px 100px 0px 100px;
-  //}
 }
-// Navigation
 
+[class^=col-] {
+  padding: 0;
+}
+
+// Navigation
 .fa-bars:before {
   content: "\f0c9";
 }
@@ -41,6 +41,23 @@ $text-width: 740px;
 .fa-times:before {
   content: "\f00d";
 }
+
+// Global
+.post-meta {
+  a {
+    display: inline-block;
+    margin: 20px 10px 0px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: $neon-blue;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+  h1 {
+    margin: 20px 10px 0px 10px;
+  }
+}
+
 
 #header {
   height: 55px;
@@ -153,17 +170,8 @@ $text-width: 740px;
   }
 }
 
-#spacer {
-  height: 1px;
-  min-height: 1px;
-  width: 100%;
-}
-
 // Post
 $default-margin: 20px 10px 10px 10px;
-
-
-
 .post-head {
   position: relative;
   height: 470px;
@@ -188,21 +196,9 @@ $default-margin: 20px 10px 10px 10px;
       a, h1 {
         color: #ffffff;
       }
-      .post-meta {
-        a {
-          display: inline-block;
-          margin: 20px 10px 0px 10px;
-          padding: 5px 10px 5px 10px;
-          background-color: $limeade;
-        }
-        h1 {
-          margin: 20px 10px 0px 10px;
-        }
-      }
     }
   }
 }
-
 
 .author-image {
   display: inline-block;
@@ -222,21 +218,195 @@ $default-margin: 20px 10px 10px 10px;
   vertical-align: top;
 }
 
-
 .post {
-   h1 {
-     display: block;
-     margin: $default-margin;
-   }
-
+  h1 {
+    display: block;
+    margin: $default-margin;
+  }
   .post-header {
     .share {
       margin: $default-margin;
     }
   }
-
   .post-content {
     margin: $default-margin;
   }
 }
 
+// Homepage
+// Banner
+.sb-banner-colour {
+  background: #FF8008; /* fallback for old browsers */
+  background: -webkit-linear-gradient(40deg, #FF8008, #FFC837) !important; ; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(40deg, #FF8008, #FFC837) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.banner-section {
+  @extend .sb-banner-colour;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ecdf55+0,82c99f+100 */
+  background: #ecdf55; /* Old browsers */
+  display: block;
+  height: 100%;
+  position: relative;
+  min-height: 650px;
+  min-width: 320px;
+  @media (min-width: $screen-xs) {
+    min-height: 750px;
+    min-width: $screen-xs;
+  }
+  @media (min-width: $screen-sm) {
+    min-height: 900px;
+    min-width: $screen-sm;
+  }
+  @media (min-width: $screen-md) {
+    min-height: 1070px;
+    min-width: $screen-md;
+  }
+  p {
+    text-align: center;
+    padding: 0 12px 0 12px;
+    margin-left: auto;margin-right: auto;
+    max-width: 330px;
+  }
+  .banner {
+    width: 100%;
+    background: url(/assets/img/svg/lines.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    .container {
+      height: 100%;
+      .row {
+        height: 100%;
+        .banner-in {
+          margin-top: 33%;
+          @media (min-width: $screen-sm) {
+            margin-top: 30%;
+          }
+          .banner-cont {
+            p {
+              text-align: center !important;
+              color: $lochmara;
+              line-height: 1.5;
+            }
+            margin-top: 10%;
+            @media(max-width: $screen-xs-max) {
+              padding: 20px 0;
+            }
+            figure {
+              //margin: 0 0 29px 0;
+              margin-left: auto;
+              margin-right: auto;
+              max-width: 300px;
+              @media(max-width: $mobile_land) {
+                width: 240px;
+                display: block;
+                margin: 0 auto 15px;
+              }
+              img {
+                display: block;
+                @media(max-width: $mobile_land) {
+                  width: 100%;
+                  height: auto;
+                  margin: 0 auto 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Loop
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+
+.col-fixed {
+  /* custom width */
+  width:320px;
+}
+.col-min {
+  /* custom min width */
+  min-width:320px;
+}
+.col-max {
+  /* custom max width */
+  max-width:320px;
+}
+
+#content {
+  $padding: 48px;
+  max-width: 1100px;
+  padding-top: $padding;
+  .post-image {
+    padding-left: $padding !important; padding-right: $padding!important;
+  }
+  article {
+    max-width: 660px;
+    margin-left: auto;margin-right: auto;
+    a {
+      font-size: 20px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+    .post-meta {
+      float: right;
+      padding: 27px 48px 0px 48px;
+    }
+    .img {
+      min-height: 300px;
+      .post-title {
+        a {
+          padding: 0 $padding 0 $padding !important;
+        }
+      }
+      .post-header {
+        padding-top: $padding;
+        padding-bottom: $padding/2;
+      }
+      p {
+        color: #ffffff;
+        padding: 0 $padding 0 $padding !important;
+      }
+
+      .post-excerpt {
+        padding-bottom: $padding/2;
+      }
+      .text {
+        vertical-align: top;
+      }
+    }
+
+  }
+  hr  {
+    border-top: 1px solid #C4C4C4;
+  }
+  @media (min-width: $screen-sm) {
+    hr  {
+      margin: 64px $padding 64px $padding;
+    }
+    article {
+      max-width: 100%;
+    }
+    img {
+      max-height: 400px;
+    }
+  }
+  padding-bottom: 200px;
+}

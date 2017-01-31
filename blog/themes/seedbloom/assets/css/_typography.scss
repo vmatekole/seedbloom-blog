@@ -1,3 +1,4 @@
+@import "global_vars";
 body, p {
   font-family: 'Roboto', sans-serif;
   /*letter-spacing: 1px;*/
@@ -10,18 +11,60 @@ body, p {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #082336;
+  color: $default-text-color;
   letter-spacing: 0.4px;
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 30px;
-  line-height: 36px;
-  color: #082336;
+  color: $default-text-color;
   letter-spacing: 0.4px;
+  margin: 0;
 }
 
-.number {
-  color: $silver-tree;
+h2 {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+h5 {
+  font-size: 14px;
+  margin: 0;
+}
+
+h6 {
+  font-size: 12px;
+  margin: 0;
+}
+
+p {
+  line-height: 1.4;
+}
+
+
+a {
+  color: $default-text-color;
+  text-decoration:none;
+  outline: 0 !important;
+  border: 0;
+}
+
+a:hover {
+  color: $default-text-color;
+  text-decoration: none;
+  border: 0;
+  color: $neon-blue !important;
 }
